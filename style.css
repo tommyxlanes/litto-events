@@ -1,0 +1,173 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', sans-serif;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.events-container {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.events-hero {
+  width: 100%;
+  height: 70vh;
+  display: block;
+  background: #f5f5f5;
+  position: relative;
+  background-image: url('images/events-hero.jpg');
+  background-position: center;
+}
+.events-date {
+  background: #101010;
+  padding: 4rem;
+  /* align-items: center;
+  justify-content: center;
+  flex-direction: column; */
+  width: fit-content;
+  text-align: center;
+}
+.events-day {
+  color: #fff;
+  font-size: 5rem;
+  line-height: 1;
+}
+.events-month {
+  color: lightgreen;
+  font-size: 2.4rem;
+}
+.events-info {
+  background: #fff;
+  padding: 2rem;
+  max-width: 300px;
+  position: absolute;
+  bottom: 5rem;
+  right: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.4rem;
+}
+.events-info-date {
+  color: #999;
+  font-weight: 700;
+}
+.events-description h3,
+.events-location h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.events-info-date,
+.events-info-time {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.events-google-map {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #127922;
+  background: rgb(77, 196, 77);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+}
+.events-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 5rem;
+}
+.events-item {
+  height: 100%;
+  width: 100%;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.events-item img {
+  width: 100%;
+  object-fit: cover;
+}
+.events-item-info {
+  font: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.events-item-info div p,
+.events-item-info h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
